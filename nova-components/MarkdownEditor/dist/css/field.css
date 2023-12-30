@@ -1,0 +1,6 @@
+/* Nova Field CSS */
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+    overflow: hidden;
+    height: 100px;
+}
+
