@@ -12,7 +12,7 @@ This tutorial will guide you through the process of creating a custom field in L
 
 To start, navigate to the root directory of your Laravel project and run the following command in your terminal:
 
-```php
+```bash
 php artisan nova:field codewithdary/markdown-editor
 ```
 
@@ -60,7 +60,6 @@ To use the custom field in your Nova resource, open the resource file (`User.php
 
 ```php
 use Codewithdary\MarkdownEditor\MarkdownEditor;
-
 ```
 
 In the `fields` method of your resource class, add the custom field to the desired field set:
