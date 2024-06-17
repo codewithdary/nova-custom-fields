@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Web"
+  },
+  {
+    "id": 2,
+    "name": "Security"
+  },
+  {
+    "id": 3,
+    "name": "Medical"
+  },
+  {
+    "id": 4,
+    "name": "Business"
+  },
+  {
+    "id": 5,
+    "name": "Security"
+  },
+  {
+    "id": 6,
+    "name": "CMC"
+  },
+  {
+    "id": 7,
+    "name": "CRTV"
+  },
+  {
+    "id": 8,
+    "name": "Marketing"
+  },
+  {
+    "id": 9,
+    "name": "Sales"
+  },
+  {
+    "id": 10,
+    "name": "Lab"
+  }
+]

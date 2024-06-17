@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Competence 1",
+        "created_by_id": 1,
+        "description": "Description of competence 1"
+    },
+    {
+        "name": "Competence 2",
+        "created_by_id": 1,
+        "description": "Description of competence 2"
+    },
+    {
+        "name": "Competence 3",
+        "created_by_id": 1,
+        "description": "Description of competence 3"
+    }
+]

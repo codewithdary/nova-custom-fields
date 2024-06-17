@@ -1,0 +1,22 @@
+<template>
+    <svg class="inline-block" :width="width" :height="height"  viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 11.6591H2.18182V5.11364H0L0 11.6591ZM12 5.65909C12 5.05909 11.5091 4.56818 10.9091 4.56818H7.46727L7.98546 2.07545L8.00182 1.90091C8.00182 1.67727 7.90909 1.47 7.76182 1.32273L7.18364 0.75L3.59455 4.34455C3.39273 4.54091 3.27273 4.81364 3.27273 5.11364V10.5682C3.27273 11.1682 3.76364 11.6591 4.36364 11.6591H9.27273C9.72546 11.6591 10.1127 11.3864 10.2764 10.9936L11.9236 7.14818C11.9727 7.02273 12 6.89182 12 6.75V5.65909Z" :fill="fill"/>
+    </svg>
+</template>
+
+<script setup>
+defineProps({
+    fill: {
+        type: String,
+        default: "#00464B"
+    },
+    width: {
+        type: Number,
+        default: 12
+    },
+    height: {
+        type: Number,
+        default: 12
+    }
+});
+</script>

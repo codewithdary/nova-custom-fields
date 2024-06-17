@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Interest 1",
+        "created_by_id": 1,
+        "description": "Description of interest 1"
+    },
+    {
+        "name": "Interest 2",
+        "created_by_id": 1,
+        "description": "Description of interest 2"
+    },
+    {
+        "name": "Interest 3",
+        "created_by_id": 1,
+        "description": "Description of interest 3"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "created_by_id": 1,
+        "company_register_id": 1,
+        "first_name": "Dary",
+        "last_name": "Nazar",
+        "email": "info@codewithdary.com",
+        "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+        "linkedin_url": "https://www.linkedin.com/in/dary-nazar-61502ab2/",
+        "description": "Three years ago, we started our journey as a creative Laravel agency. We were passionate about coding and wanted to make a difference in the web development industry. We tried to tell our story in PHP and Laravel by creating YouTube content, and we were thrilled to see that our channel quickly gained a following. Today, we are proud to say that we have over 50k subscribers and counting! Our passion for coding continues to drive us forward, and we are excited to see where this journey takes us next.\n\n",
+        "avatar_path": "",
+        "phone_number": "+31621193311",
+        "gender": "Male",
+        "country": "The Netherlands",
+        "terms_agreement": 1,
+        "is_onboarded": 1
+    }
+]

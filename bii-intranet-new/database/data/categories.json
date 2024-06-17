@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Start-ups",
+        "created_by_id": 1,
+        "description": "Description of start-ups"
+    },
+    {
+        "name": "VC",
+        "created_by_id": 1,
+        "description": "Description of VC"
+    },
+    {
+        "name": "Service collaborators",
+        "created_by_id": 1,
+        "description": "Description of service collaborators"
+    }
+]

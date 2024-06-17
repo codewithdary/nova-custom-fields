@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Web Developer"
+  },
+  {
+    "id": 2,
+    "name": "Medical"
+  },
+  {
+    "id": 3,
+    "name": "Business Development"
+  },
+  {
+    "id": 4,
+    "name": "Programming"
+  },
+  {
+    "id": 5,
+    "name": "Student"
+  },
+  {
+    "id": 6,
+    "name": "CMC"
+  },
+  {
+    "id": 7,
+    "name": "Chemistry"
+  },
+  {
+    "id": 8,
+    "name": "Antibodies"
+  },
+  {
+    "id": 9,
+    "name": "IT Security"
+  },
+  {
+    "id": 10,
+    "name": "Lab Management"
+  }
+]

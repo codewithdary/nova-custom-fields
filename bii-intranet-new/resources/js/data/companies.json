@@ -1,0 +1,20 @@
+[
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNqbrcEClWhLl163JC0Wrm9PiFf7n8U2G2lTbNigpb0GWAUeasHC-h3N_0BWhFuyAIOX8&usqp=CAU",
+    "name": "BioInnovation Institute",
+    "email": "info@bii.dk",
+    "program": "BII Program",
+    "note": "Internal",
+    "visibility": true,
+    "date": "01-01-2024"
+  },
+  {
+    "img": "/images/cwd-logo.jpg",
+    "name": "Code With Dary",
+    "email": "info@codewithdary.com",
+    "program": "BII Program",
+    "note": "Internal",
+    "visibility": false,
+    "date": "01-01-2024"
+  }
+]

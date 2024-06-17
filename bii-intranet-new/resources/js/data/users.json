@@ -1,0 +1,112 @@
+[
+  {
+    "name": "John Smith",
+    "role": "Senior Engineer at Acme Corporation",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "Emily Johnson",
+    "role": "Marketing Manager at XYZ Enterprises",
+    "image": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "Michael Davis",
+    "role": "Project Manager at Global Solutions Inc.",
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "Sarah Thompson",
+    "role": "Data Analyst at Tech Innovators",
+    "image": "https://plus.unsplash.com/premium_photo-1669882305300-38b609862bee?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "Robert Wilson",
+    "role": "Sales Representative at Bright Future Co.",
+    "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "name": "Jennifer Lee",
+    "role": "Human Resources Specialist at Star Group",
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "name": "David Brown",
+    "role": "Financial Analyst at Elite Investments",
+    "image": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "name": "Jessica Roberts",
+    "role": "Product Designer at Innovate Tech",
+    "image": "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "name": "Erhart Cockrin",
+    "role": "Product Lead at Cyberdyne Systems",
+    "image": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "name": "Dianne Guilianelli",
+    "role": "General Manager at Initech",
+    "image": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "Christopher Taylor",
+    "role": "Operations Manager at MegaCorp Industries",
+    "image": "https://plus.unsplash.com/premium_photo-1658527049634-15142565537a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "John Smith",
+    "role": "Senior Engineer at Acme Corporation",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "Emily Johnson",
+    "role": "Marketing Manager at XYZ Enterprises",
+    "image": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "Michael Davis",
+    "role": "Project Manager at Global Solutions Inc.",
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "Sarah Thompson",
+    "role": "Data Analyst at Tech Innovators",
+    "image": "https://plus.unsplash.com/premium_photo-1669882305300-38b609862bee?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "Robert Wilson",
+    "role": "Sales Representative at Bright Future Co.",
+    "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "name": "Jennifer Lee",
+    "role": "Human Resources Specialist at Star Group",
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "name": "David Brown",
+    "role": "Financial Analyst at Elite Investments",
+    "image": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "name": "Jessica Roberts",
+    "role": "Product Designer at Innovate Tech",
+    "image": "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "name": "Erhart Cockrin",
+    "role": "Product Lead at Cyberdyne Systems",
+    "image": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "name": "Dianne Guilianelli",
+    "role": "General Manager at Initech",
+    "image": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "name": "Christopher Taylor",
+    "role": "Operations Manager at MegaCorp Industries",
+    "image": "https://plus.unsplash.com/premium_photo-1658527049634-15142565537a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww"
+  }
+]

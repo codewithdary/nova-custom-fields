@@ -1,0 +1,29 @@
+[
+    {
+        "category_id": 1,
+        "portfolio_id": 1,
+        "name": "Bioinnovation Institute",
+        "excerpt": "BioInnovation Institute's vision is to support world-class life science innovation that drives the development",
+        "description": "BioInnovation Institute's vision is to support world-class life science innovation that drives the development of new solutions by early-stage life science start-ups for the benefit of people and society.\n\nOur mission is to incubate world-class life science and catalyze the commercialization of new solutions through start-ups by using our knowledge, network, funding, and infrastructure.\n\n",
+        "fund_size": 100,
+        "ticket_size": 100
+    },
+    {
+        "category_id": 2,
+        "portfolio_id": 2,
+        "name": "Code With Dary",
+        "excerpt": "BioInnovation Institute's vision is to support world-class life science innovation that drives the development",
+        "description": "BioInnovation Institute's vision is to support world-class life science innovation that drives the development of new solutions by early-stage life science start-ups for the benefit of people and society.\n\nOur mission is to incubate world-class life science and catalyze the commercialization of new solutions through start-ups by using our knowledge, network, funding, and infrastructure.\n\n",
+        "fund_size": 100,
+        "ticket_size": 100
+    },
+    {
+        "category_id": 3,
+        "portfolio_id": 3,
+        "name": "BII",
+        "excerpt": "BioInnovation Institute's vision is to support world-class life science innovation that drives the development",
+        "description": "BioInnovation Institute's vision is to support world-class life science innovation that drives the development of new solutions by early-stage life science start-ups for the benefit of people and society.\n\nOur mission is to incubate world-class life science and catalyze the commercialization of new solutions through start-ups by using our knowledge, network, funding, and infrastructure.\n\n",
+        "fund_size": 100,
+        "ticket_size": 100
+    }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Code With Dary",
+    "href": "#", "initial": "CD",
+    "current": false
+  },
+  {
+    "id": 2,
+    "name": "BioInnovation Institute",
+    "href": "#",
+    "initial": "BII",
+    "current": false
+  },
+  {
+    "id": 3,
+    "name": "Deep Tech Lab",
+    "href": "#",
+    "initial": "DTL",
+    "current": false
+  }
+]

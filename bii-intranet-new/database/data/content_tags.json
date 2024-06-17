@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Content tag 1",
+        "created_by_id": 1,
+        "description": "Description of content tag 1"
+    },
+    {
+        "name": "Content tag 2",
+        "created_by_id": 1,
+        "description": "Description of content tag 2"
+    },
+    {
+        "name": "Content tag 3",
+        "created_by_id": 1,
+        "description": "Description of content tag 3"
+    }
+]

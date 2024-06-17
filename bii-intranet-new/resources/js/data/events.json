@@ -1,0 +1,74 @@
+[
+  {
+    "title": "(Group3) VL6 Halo",
+    "location": "Online",
+    "host": "Anne Marie Melia",
+    "status": true,
+    "month": "Feb",
+    "day": "12",
+    "signups": 3
+  },
+  {
+    "title": "BII Friday bar",
+    "location": "BII Canteen",
+    "host": "Dary Nazar",
+    "notify": true,
+    "month": "Feb",
+    "day": "13",
+    "signups": 0
+  },
+  {
+    "title": "BII Fermentation Club February 2024 Edition",
+    "location": "Catalyst Cafe 3rd Floor",
+    "host": "Bo Heinemann",
+    "status": true,
+    "month": "Feb",
+    "day": "14",
+    "signups": 3
+  },
+  {
+    "title": "BII Friday bar 2",
+    "location": "BII Canteen",
+    "host": "Dary Nazar",
+    "notify": true,
+    "month": "Feb",
+    "day": "16",
+    "signups": 0
+  },
+  {
+    "title": "BII Friday Bar (Summer School closeout)",
+    "location": "Friday Bar Committee",
+    "host": "Emilie Josefine Lyderik",
+    "status": true,
+    "month": "Feb",
+    "day": "17",
+    "signups": 3
+  },
+  {
+    "title": "Scientific Storytelling - Brunch and Brainstorm",
+    "location": "Room M0.8 – Oxygen & M0.9 – Fluorine",
+    "host": "Hanna Ollinen",
+    "notify": true,
+    "month": "Feb",
+    "day": "18",
+    "signups": 0
+  },
+  {
+    "title": "(Group2) VL6 Halo",
+    "location": "Matrikel 1, Højbro Plads 10, 1200 København, Denmark",
+    "host": "Anne Marie Melia",
+    "status": true,
+    "month": "Feb",
+    "day": "19",
+    "signups": 3
+  },
+  {
+    "title": "BII Friday bar",
+    "location": "BII Canteen",
+    "host": "Dary Nazar",
+    "notify": true,
+    "month": "Feb",
+    "day": "20",
+    "signups": 0
+  }
+]

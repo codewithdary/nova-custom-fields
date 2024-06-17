@@ -1,0 +1,62 @@
+[
+    {
+        "name": "system_admin",
+        "display_name": "System admin",
+        "description": "manages and oversees all operations on the platform."
+    },
+    {
+        "name": "company_admin",
+        "display_name": "Company admin",
+        "description": "Manages and oversees all operations within their company on the platform."
+    },
+    {
+        "name": "company_user",
+        "display_name": "Company user",
+        "description": "Regular user within a company, capable of accessing and interacting with company-specific modules."
+    },
+    {
+        "name": "vc_coordinator",
+        "display_name": "VC coordinator",
+        "description": "Coordinates venture capital activities and communications within the platform."
+    },
+    {
+        "name": "bii_anchor",
+        "display_name": "BII anchor",
+        "description": "Acts as the main point of contact for BII, facilitating communication and management within the platform."
+    },
+    {
+        "name": "bii_comms",
+        "display_name": "BII comms",
+        "description": "Handles BII-specific communications and public relations tasks within the platform."
+    },
+    {
+        "name": "coordinator",
+        "display_name": "Coordinator",
+        "description": "Organizes and ensures smooth operation of various activities within the platform."
+    },
+    {
+        "name": "relationship_manager",
+        "display_name": "Relationship manager",
+        "description": "Maintains and develops relationships with users and stakeholders within the platform."
+    },
+    {
+        "name": "legal_manager",
+        "display_name": "Legal manager",
+        "description": "Handles legal matters, ensuring compliance and managing legal risks within the platform."
+    },
+    {
+        "name": "finance_manager",
+        "display_name": "Finance manager",
+        "description": "Manages financial operations and transactions within the platform."
+    },
+    {
+        "name": "facility_manager",
+        "display_name": "Facility manager",
+        "description": "Oversees the management and maintenance of physical resources and facilities within the platform."
+    },
+    {
+        "name": "novo_impact",
+        "display_name": "Novo impact",
+        "description": "Facilitates and manages initiatives aimed at creating positive societal impact within the Novo ecosystem."
+    }
+]

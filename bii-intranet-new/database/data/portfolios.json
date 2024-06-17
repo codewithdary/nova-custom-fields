@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Therapeutics",
+        "excerpt": "At BioInnovation Institute, we offer incubation programs to life science projects and start-ups within therapeutics, bioindustrials, and health tech.",
+        "description": "At BioInnovation Institute, we offer incubation programs to life science projects and start-ups within therapeutics, bioindustrials, and health tech. Three areas that can truly make an impact on global health and the environment but not without initial funding, the right network, and business development to eventually reach the market.",
+        "is_active": true
+    },
+    {
+        "name": "Health Tech",
+        "excerpt": "At BioInnovation Institute, we offer incubation programs to life science projects and start-ups within therapeutics, bioindustrials, and health tech.",
+        "description": "At BioInnovation Institute, we offer incubation programs to life science projects and start-ups within therapeutics, bioindustrials, and health tech. Three areas that can truly make an impact on global health and the environment but not without initial funding, the right network, and business development to eventually reach the market.",
+        "is_active": true
+    },
+    {
+        "name": "Planetary Health",
+        "excerpt": "At BioInnovation Institute, we offer incubation programs to life science projects and start-ups within therapeutics, bioindustrials, and health tech.",
+        "description": "At BioInnovation Institute, we offer incubation programs to life science projects and start-ups within therapeutics, bioindustrials, and health tech. Three areas that can truly make an impact on global health and the environment but not without initial funding, the right network, and business development to eventually reach the market.",
+        "is_active": true
+    }
+]

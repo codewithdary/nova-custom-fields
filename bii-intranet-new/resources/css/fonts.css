@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Cerebri Sans Bold';
+    src: url('../fonts/cerebri/Cerebri-Sans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cerebri Sans Bold Italic';
+    src: url('../fonts/cerebri/Cerebri-Sans-Bold-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cerebri Sans Bold Italic';
+    src: url('../fonts/cerebri/Cerebri-Sans-Bold-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cerebri Sans ExtraBold';
+    src: url('../fonts/cerebri/Cerebri-Sans-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cerebri Sans ExtraBold Italic';
+    src: url('../fonts/cerebri/Cerebri-Sans-ExtraBold-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cerebri Sans SemiBold';
+    src: url('../fonts/cerebri/Cerebri-Sans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cerebri Sans Italic';
+    src: url('../fonts/cerebri/Cerebri-Sans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cerebri Sans Book';
+    src: url('../fonts/cerebri/Cerebri-Sans-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cerebri Sans Normal';
+    src: url('../fonts/cerebri/Cerebri-Sans-Book.ttf') format('truetype');
+}
