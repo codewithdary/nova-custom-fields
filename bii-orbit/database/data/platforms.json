@@ -1,0 +1,12 @@
+[
+    {
+        "id": "885e9ce6-d365-4972-b1b4-fa35d0268595",
+        "name": "BII Orbit",
+        "description": "The BII Intranet is your centralized hub for staying connected and informed within BII. It offers easy access to the latest company news, essential resources, and networking opportunities with colleagues. You can explore a wide range of content, including internal updates, policy documents, and training materials. Additionally, the intranet is a gateway to BII’s upcoming events, enabling you to engage with relevant webinars, workshops, and other activities. Whether you’re looking to stay updated or connect with others, the BII Intranet is your go-to platform for fostering collaboration and growth across the organization."
+    },
+    {
+        "id": "c563e6df-e2d7-496d-ad34-25082fc08e74",
+        "name": "BII Investor Network",
+        "description": "A centralized investor platform where BII start-ups can showcase their potential and investors can connect with both start-ups and fellow investors. This hub is designed for discovery, connection, and growth."
+    }
+]
