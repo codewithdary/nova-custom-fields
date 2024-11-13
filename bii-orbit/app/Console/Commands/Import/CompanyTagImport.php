@@ -27,11 +27,20 @@ class CompanyTagImport extends Command
     {
         $tags = $databaseQueries->getCompanyTagsQuery();
 
+        $bar = $this->output->createProgressBar(count($tags));
+
+        $bar->start();
+
         foreach($tags as $tag) {
             CompanyTag::updateOrCreate(['id' => $tag->id], [
                 'name' => $tag->name,
                 'description' => $tag->description,
             ]);
+
+            $bar->advance();
         }
+        $this->info(__('import.company_tags'));
+
+        $bar->finish();
     }
 }

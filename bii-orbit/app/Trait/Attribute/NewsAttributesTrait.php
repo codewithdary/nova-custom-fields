@@ -29,4 +29,24 @@ trait NewsAttributesTrait
             get: fn () => date('M j, Y', strtotime($this->created_at))
         );
     }
+
+    /**
+     * @return Attribute
+     */
+    public function statusText(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->is_published ? __('title.published') : __('title.draft')
+        );
+    }
+
+    /**
+     * @return Attribute
+     */
+    public function creatorName(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->creator ? $this->creator->full_name : __('title.bii')
+        );
+    }
 }

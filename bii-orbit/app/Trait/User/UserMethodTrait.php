@@ -2,7 +2,6 @@
 
 namespace App\Trait\User;
 
-use App\Models\Company;
 use App\Notifications\ResetPasswordNotification;
 
 trait UserMethodTrait
@@ -37,13 +36,5 @@ trait UserMethodTrait
     public function isOnboarded(): bool
     {
         return $this->hasVerifiedEmail()  && $this->is_onboarded && $this->terms_agreement;
-    }
-
-    /**
-     * @return Company
-     */
-    public function getFirstAssociatedCompany(): Company
-    {
-        return $this->companies->first();
     }
 }

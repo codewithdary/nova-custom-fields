@@ -22,7 +22,7 @@ class PeopleService
      */
     public function show(User $user): User
     {
-        return $user->load('skills', 'events');
+        return $user->load('skills', 'upcomingEvents');
     }
 
     /**
@@ -34,7 +34,9 @@ class PeopleService
         return [
             'search' => $request->query('search', ''),
             'cohorts' => $request->query('cohorts', []),
-            'categories' => $request->query('categories', []),
+            'verticals' => $request->query('verticals', []),
+            'technologies' => $request->query('technologies', []),
+            'indications' => $request->query('indications', []),
             'kths' => $request->query('kths', []),
             'isLatestJoined' => $request->query('isLatestJoined', ''),
         ];

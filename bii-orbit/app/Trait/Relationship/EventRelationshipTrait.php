@@ -2,6 +2,7 @@
 
 namespace App\Trait\Relationship;
 
+use App\Models\Vertical;
 use App\Models\CompanyTag;
 use App\Models\ContentTag;
 use App\Models\User;
@@ -32,6 +33,14 @@ trait EventRelationshipTrait
     public function contentTags(): BelongsToMany
     {
         return $this->belongsToMany(ContentTag::class);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function verticals(): BelongsToMany
+    {
+        return $this->belongsToMany(Vertical::class);
     }
 
     /**

@@ -3,10 +3,23 @@
 namespace App\Trait\Mail;
 
 use App\Mail\CustomMail;
+use App\Mail\Onboarding\OnboardingEmail;
+use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 
 trait MailNotificationTrait
 {
+    /**
+     * @param User $user
+     * @param string $key
+     * @param string $url
+     * @return void
+     */
+    public static function createUserOnboardingMail(User $user, string $key, string $url): void
+    {
+        Mail::to($user->email)->send(new OnboardingEmail($user, $key, $url));
+    }
+
     /**
      * @param string $to
      * @param string $title

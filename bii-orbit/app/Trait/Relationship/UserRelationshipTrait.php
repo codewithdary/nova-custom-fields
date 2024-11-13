@@ -7,6 +7,8 @@ use App\Models\Endorsement;
 use App\Models\Event;
 use App\Models\Kth;
 use App\Models\Skill;
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -21,6 +23,15 @@ trait UserRelationshipTrait
     }
 
     /**
+     * @return mixed
+     */
+    public function upcomingEvents(): BelongsToMany
+    {
+        return $this->belongsToMany(Event::class)
+            ->where('starts_at', '>', Carbon::today());
+    }
+
+    /**
      * @return BelongsToMany
      */
     public function skills(): BelongsToMany
@@ -29,12 +40,11 @@ trait UserRelationshipTrait
     }
 
     /**
-     * @return BelongsToMany
+     * @return BelongsTo
      */
-    public function companies(): BelongsToMany
+    public function company(): BelongsTo
     {
-        return $this->belongsToMany(Company::class, 'employees')
-            ->withPivot('role_id', 'is_contactperson');
+        return $this->belongsTo(Company::class);
     }
 
     /**

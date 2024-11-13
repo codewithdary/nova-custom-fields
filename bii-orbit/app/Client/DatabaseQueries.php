@@ -21,6 +21,28 @@ class DatabaseQueries
     /**
      * @return Collection
      */
+    public function getFilesQuery(): Collection
+    {
+        return DB::connection(env('DB_CONNECTION_NAME'))
+            ->table('file_storage_files')
+            ->distinct()
+            ->get();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getFoldersQuery(): Collection
+    {
+        return DB::connection(env('DB_CONNECTION_NAME'))
+            ->table('file_storage_folders')
+            ->distinct()
+            ->get();
+    }
+
+    /**
+     * @return Collection
+     */
     public function getArticlesQuery(): Collection
     {
         return DB::connection(env('DB_CONNECTION_NAME'))
@@ -105,6 +127,17 @@ class DatabaseQueries
     /**
      * @return Collection
      */
+public function getParticipantsQuery(): Collection
+    {
+        return DB::connection(env('DB_CONNECTION_NAME'))
+            ->table('event_participants')
+            ->distinct()
+            ->get();
+    }
+
+    /**
+     * @return Collection
+     */
     public function getNewsTagsQuery(): Collection
     {
         return DB::connection(env('DB_CONNECTION_NAME'))
@@ -120,6 +153,28 @@ class DatabaseQueries
     {
         return DB::connection(env('DB_CONNECTION_NAME'))
             ->table('events')
+            ->distinct()
+            ->get();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getEventContentTagsQuery(): Collection
+    {
+        return DB::connection(env('DB_CONNECTION_NAME'))
+            ->table('content_tag_event')
+            ->distinct()
+            ->get();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getEventCompanyTagsQuery(): Collection
+    {
+        return DB::connection(env('DB_CONNECTION_NAME'))
+            ->table('company_tag_event')
             ->distinct()
             ->get();
     }
@@ -218,13 +273,21 @@ class DatabaseQueries
     /**
      * @return Collection
      */
+    /**
+     * @return Collection
+     */
     public function getUsersQuery(): Collection
     {
         return DB::connection(env('DB_CONNECTION_NAME'))
             ->table('users')
             ->leftJoin('employees', 'users.id', '=', 'employees.user_id')
-            ->select('users.*', 'employees.work_title as company_position')
-            ->groupBy('users.id')
+            ->select(
+                'users.*',
+                'employees.work_title as company_position',
+                'employees.company_id as company_id'
+            )
+            ->distinct()
+            ->groupBy('users.id', 'employees.work_title', 'employees.company_id')
             ->get();
     }
 }

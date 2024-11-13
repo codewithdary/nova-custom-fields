@@ -4,106 +4,84 @@ namespace App\Trait\Query;
 
 use App\Enums\Program\ProgramEnum;
 use App\Models\Event;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
 
 trait CompanyQueryTrait
 {
     /**
      * @param string $search
-     * @return Collection
+     * @param array $categories
+     * @param array $cohorts
+     * @param array $impacts
+     * @param bool|string $isLatestJoined
+     * @param bool|string $isOnSite
+     * @param bool|string $isResidentCompany
+     * @return LengthAwarePaginator
      */
-    public static function getAllSearchedCompanies(string $search): Collection
+    public static function getAllSearchedAndFilteredCompanies(
+        string $search,
+        array $verticals = [],
+        array $technologies = [],
+        array $indications = [],
+        array $cohorts = [],
+        array $impacts = [],
+        bool|string $isLatestJoined = false,
+        bool|string $isOnSite = false,
+        bool|string $isResidentCompany = false
+    ): LengthAwarePaginator
     {
-        return self::search($search)->query(function ($builder) {
-            $builder
-                ->with('serviceDomain')
+        return self::search($search)->query(function ($builder) use ($verticals, $technologies, $indications, $cohorts, $impacts, $isLatestJoined, $isOnSite, $isResidentCompany) {
+            $builder->with('cohorts', 'program', 'vertical', 'technologies', 'indications')
+                ->select('id', 'logo_path', 'name', 'country', 'excerpt', 'description', 'vertical_id')
                 ->whereNull('deleted_at')
-                ->whereNotNull('logo_path')
-                ->with('cohorts', 'program');
-        })->oldest()->get();
-    }
+                ->whereNotNull('logo_path');
 
-    /**
-     * @param array $categories
-     * @param array $cohorts
-     * @param array $impacts
-     * @param bool|string $isLatestJoined
-     * @param bool|string $isOnSite
-     * @param array $programIds
-     * @return Collection
-     */
-    public static function getAllProgramsExceptResidence(array $categories, array $cohorts, array $impacts, bool|string $isLatestJoined, bool|string $isOnSite, array $programIds): Collection
-    {
-        return self::with('cohorts', 'program', 'categories')
-            ->whereIn('program_id', $programIds)
-            ->whereNull('deleted_at')
-            ->whereNotNull('logo_path')
-            ->when(!empty($categories), function ($query) use ($categories) {
-                $query->whereHas('categories', function ($q) use ($categories) {
-                    $q->whereIn('name', $categories);
+            $builder->when(!empty($verticals), function ($query) use ($verticals) {
+                $query->whereHas('vertical', function ($q) use ($verticals) {
+                    $q->whereIn('name', $verticals);
                 });
-            })
-            ->when(!empty($cohorts), function ($query) use ($cohorts) {
-                $query->whereHas('impacts', function ($q) use ($cohorts) {
+            });
+
+            $builder->when(!empty($cohorts), function ($query) use ($cohorts) {
+                $query->whereHas('cohorts', function ($q) use ($cohorts) {
                     $q->whereIn('name', $cohorts);
                 });
-            })
-            ->when(!empty($impacts), function ($query) use ($impacts) {
+            });
+
+            $builder->when(!empty($indications), function ($query) use ($indications) {
+                $query->whereHas('indications', function ($q) use ($indications) {
+                    $q->whereIn('name', $indications);
+                });
+            });
+
+            $builder->when(!empty($technologies), function ($query) use ($technologies) {
+                $query->whereHas('technologies', function ($q) use ($technologies) {
+                    $q->whereIn('name', $technologies);
+                });
+            });
+
+            $builder->when(!empty($impacts), function ($query) use ($impacts) {
                 $query->whereHas('impacts', function ($q) use ($impacts) {
                     $q->whereIn('name', $impacts);
                 });
-            })
-            ->when($isLatestJoined || $isLatestJoined === 'true', function ($query) {
-                $query->orderBy('created_at', 'desc');
-            }, function ($query) {
-                $query->orderBy('created_at', 'asc');
-            })
-            ->when($isOnSite || $isOnSite === 'true', function ($query) use ($isOnSite) {
-                $query->where('is_on_site_at_bii', true);
-            })
-            ->latest()
-            ->get();
-    }
+            });
 
-    /**
-     * @param array $categories
-     * @param array $cohorts
-     * @param array $impacts
-     * @param bool|string $isLatestJoined
-     * @param bool|string $isOnSite
-     * @return mixed
-     */
-    public static function getAllResidenceCompanies(array $categories, array $cohorts, array $impacts, bool|string $isLatestJoined, bool|string $isOnSite): mixed
-    {
-        return self::with('cohorts', 'program', 'categories')
-            ->where('program_id', ProgramEnum::RESIDENCE->value)
-            ->whereNull('deleted_at')
-            ->whereNotNull('logo_path')
-            ->when(!empty($categories), function ($query) use ($categories) {
-                $query->whereHas('categories', function ($q) use ($categories) {
-                    $q->whereIn('name', $categories);
-                });
-            })
-            ->when(!empty($cohorts), function ($query) use ($cohorts) {
-                $query->whereHas('impacts', function ($q) use ($cohorts) {
-                    $q->whereIn('name', $cohorts);
-                });
-            })
-            ->when(!empty($impacts), function ($query) use ($impacts) {
-                $query->whereHas('impacts', function ($q) use ($impacts) {
-                    $q->whereIn('name', $impacts);
-                });
-            })
-            ->when($isLatestJoined || $isLatestJoined === 'true', function ($query) {
+            $builder->when((bool) $isLatestJoined, function ($query) {
                 $query->orderBy('created_at', 'desc');
             }, function ($query) {
                 $query->orderBy('created_at', 'asc');
-            })
-            ->when($isOnSite || $isOnSite === 'true', function ($query) use ($isOnSite) {
+            });
+
+            $builder->when((bool) $isOnSite, function ($query) {
                 $query->where('is_on_site_at_bii', true);
-            })
-            ->latest()
-            ->get();
+            });
+
+            $builder->when((bool) $isResidentCompany, function ($query) {
+                $query->where('program_id', ProgramEnum::RESIDENCE->value);
+            });
+
+        })->paginate();
     }
 
     /**
@@ -114,5 +92,32 @@ trait CompanyQueryTrait
         return Event::whereHas('participants', function ($query) {
             $query->whereIn('users.id', $this->employees()->pluck('users.id'));
         });
+    }
+
+    /**
+     * @param string $search
+     * @param int $size
+     * @param string $direction
+     * @param string $sort
+     * @param bool $isResidentCompany
+     * @return LengthAwarePaginator
+     */
+    public static function getAllPaginatedCompanies(string $search, int $size, string $direction, string $sort, bool $isResidentCompany = false): LengthAwarePaginator
+    {
+        return self::search($search)
+            ->query(function ($builder) use ($sort, $direction, $isResidentCompany) {
+                $builder->with('program')
+                    ->select('id', 'logo_path', 'name', 'country', 'program_id', 'onboarded_at')
+                    ->orderBy($sort, $direction);
+
+                $builder->when(!$isResidentCompany, function ($query) {
+                    $query->where('program_id', '!=', ProgramEnum::RESIDENCE->value);
+                });
+
+                $builder->when($isResidentCompany, function ($query) {
+                    $query->where('program_id', ProgramEnum::RESIDENCE->value);
+                });
+            })
+            ->paginate($size);
     }
 }

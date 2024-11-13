@@ -2,13 +2,22 @@
 
 namespace App\Trait\Relationship;
 
-use App\Models\Category;
+use App\Models\Indication;
+use App\Models\Technology;
+use App\Models\Vertical;
 use App\Models\Cohort;
+use App\Models\DevelopmentStage;
+use App\Models\File;
+use App\Models\Folder;
 use App\Models\Impact;
 use App\Models\Program;
+use App\Models\Stage;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 trait CompanyRelationshipTrait
 {
@@ -21,11 +30,29 @@ trait CompanyRelationshipTrait
     }
 
     /**
-     * @return BelongsToMany
+     * @return HasMany
      */
-    public function categories(): BelongsToMany
+    public function folders(): HasMany
     {
-        return $this->belongsToMany(Category::class);
+        return $this->hasMany(Folder::class)
+            ->whereNull('parent_id');
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function files(): HasMany
+    {
+        return $this->hasMany(File::class)
+            ->whereNull('folder_id');
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function vertical(): BelongsTo
+    {
+        return $this->belongsTo(Vertical::class);
     }
 
     /**
@@ -37,6 +64,22 @@ trait CompanyRelationshipTrait
     }
 
     /**
+     * @return BelongsToMany
+     */
+    public function technologies(): BelongsToMany
+    {
+        return $this->belongsToMany(Technology::class);
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function indications(): BelongsToMany
+    {
+        return $this->belongsToMany(Indication::class);
+    }
+
+    /**
      * @return BelongsTo
      */
     public function program(): BelongsTo
@@ -45,11 +88,20 @@ trait CompanyRelationshipTrait
     }
 
     /**
-     * @return BelongsToMany
+     * @return HasMany
      */
-    public function employees(): BelongsToMany
+    public function employees(): HasMany
     {
-        return $this->belongsToMany(User::class, 'employees');
+        return $this->hasMany(User::class);
+    }
+
+    /**
+     * @return HasOne
+     */
+    public function firstEmployee(): HasOne
+    {
+        return $this->hasOne(User::class)
+            ->orderBy('id');
     }
 
     /**
@@ -58,5 +110,29 @@ trait CompanyRelationshipTrait
     public function anchors(): BelongsToMany
     {
         return $this->belongsToMany(User::class, 'anchor_company');
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function tags(): BelongsToMany
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function stages(): BelongsToMany
+    {
+        return $this->belongsToMany(Stage::class);
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function developmentStage(): BelongsTo
+    {
+        return $this->belongsTo(DevelopmentStage::class);
     }
 }

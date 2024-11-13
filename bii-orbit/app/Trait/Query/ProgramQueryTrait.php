@@ -11,4 +11,12 @@ trait ProgramQueryTrait
     {
         return self::latest()->get();
     }
+
+    /**
+     * @return mixed
+     */
+    public static function getProgramNameAndIds(): mixed
+    {
+        return self::pluck('name', 'id');
+    }
 }

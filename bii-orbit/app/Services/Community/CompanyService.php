@@ -2,27 +2,22 @@
 
 namespace App\Services\Community;
 
-use App\Enums\Program\ProgramEnum;
 use App\Models\Company;
 use Illuminate\Http\Request;
 
 class CompanyService
 {
-    /**
-     * @param Request $request
-     * @return array
-     */
     public function index(Request $request): array
     {
-        $programIds = array_map(
-            fn($case) => $case->value,
-            array_filter(ProgramEnum::cases(), fn($case) => $case !== ProgramEnum::RESIDENCE)
-        );
+        $filters = $this->getFilters($request);
 
-        return [
-            'filters' => $this->getFilters($request),
-            'programIds' => $programIds,
-        ];
+        $isResidenceRoute = request()->routeIs('communities.residents.index');
+        $indexRoute = $isResidenceRoute ? route('communities.residents.index') : route('communities.companies.index');
+
+        return array_merge($filters, [
+            'isResidenceRoute' => $isResidenceRoute,
+            'indexRoute' => $indexRoute,
+        ]);
     }
 
     /**
@@ -31,7 +26,7 @@ class CompanyService
      */
     public function show(Company $company): Company
     {
-        return $company->load('program', 'employees', 'cohorts', 'anchors', 'categories', 'impacts');
+        return $company->load('program', 'employees', 'cohorts', 'anchors', 'vertical', 'technologies', 'indications', 'impacts', 'firstEmployee');
     }
 
     /**
@@ -42,11 +37,14 @@ class CompanyService
     {
         return [
             'search' => $request->query('search', ''),
-            'categories' => $request->query('categories', []),
+            'verticals' => $request->query('verticals', []),
             'cohorts' => $request->query('cohorts', []),
             'impacts' => $request->query('impacts', []),
+            'technologies' => $request->query('technologies', []),
+            'indications' => $request->query('indications', []),
             'isLatestJoined' => $request->query('isLatestJoined', ''),
             'isOnSite' => $request->query('isOnSite', ''),
+            'isResidentCompany' => $request->query('isResidentCompany', ''),
         ];
     }
 }

@@ -11,4 +11,12 @@ trait SkillQueryTrait
     {
         return self::oldest()->get();
     }
+
+    /**
+     * @return mixed
+     */
+    public static function getSkillNameAndIds(): mixed
+    {
+        return self::pluck('name', 'id');
+    }
 }
